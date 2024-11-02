@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <omp.h>
-
+#include <unistd.h>
 //  the function f(x) = ln(x) / x
 double f(double x) {
     return log(x) / x;
@@ -20,7 +20,6 @@ double calculate_area(double a, double b, int n, int num_threads) {
         int thread_id = omp_get_thread_num();
         double partial_area = 0.0;
         double thread_start_time = omp_get_wtime();
-
         #pragma omp for
         for (int i = 0; i < n; i++) {
             double x = a + i * width;
@@ -65,7 +64,5 @@ if (scanf("%d", &n) != 1) {
     double area = calculate_area(a, b, n, num_threads);
     printf("Approximate area under the curve: %f\n", area);
     printf("\n----------------------   gprof results  ----------------------\n\n ");
-
-
     return 0;
 }
