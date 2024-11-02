@@ -1,0 +1,11 @@
+to run the program follow this :
+--------------------------------
+make clean
+
+make run
+
+
+------------------------------
+
+This setup will give you an automated way to profile the program and review the results using gprof_report.txt.
+
