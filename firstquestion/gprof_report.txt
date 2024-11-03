@@ -6,6 +6,8 @@ Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
   0.00      0.00     0.00        1     0.00     0.00  calculate_area
+  0.00      0.00     0.00        1     0.00     0.00  display_results
+  0.00      0.00     0.00        1     0.00     0.00  get_input
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -46,8 +48,14 @@ notice and this notice are preserved.
 granularity: each sample hit covers 4 byte(s) no time propagated
 
 index % time    self  children    called     name
-                0.00    0.00       1/1           main [8]
+                0.00    0.00       1/1           main [10]
 [1]      0.0    0.00    0.00       1         calculate_area [1]
+-----------------------------------------------
+                0.00    0.00       1/1           main [10]
+[2]      0.0    0.00    0.00       1         display_results [2]
+-----------------------------------------------
+                0.00    0.00       1/1           main [10]
+[3]      0.0    0.00    0.00       1         get_input [3]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -140,4 +148,4 @@ notice and this notice are preserved.
 
 Index by function name
 
-   [1] calculate_area
+   [1] calculate_area          [2] display_results         [3] get_input

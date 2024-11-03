@@ -1,11 +1,11 @@
 Flat profile:
 
 Each sample counts as 0.01 seconds.
- no time accumulated
-
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  Ts/call  Ts/call  name    
-  0.00      0.00     0.00        2     0.00     0.00  monte_carlo_mandelbrot
+ 86.69      5.43     5.43                             frame_dummy
+ 13.44      6.27     0.84                             _init
+  0.00      6.27     0.00        2     0.00     0.00  monte_carlo_mandelbrot
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -34,7 +34,7 @@ name       the name of the function.  This is the minor sort
 	   in parenthesis it shows where it would appear in
 	   the gprof listing if it were to be printed.
 
-Copyright (C) 2012-2022 Free Software Foundation, Inc.
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
@@ -43,11 +43,17 @@ notice and this notice are preserved.
 		     Call graph (explanation follows)
 
 
-granularity: each sample hit covers 4 byte(s) no time propagated
+granularity: each sample hit covers 2 byte(s) for 0.16% of 6.27 seconds
 
 index % time    self  children    called     name
-                0.00    0.00       2/2           main [8]
-[1]      0.0    0.00    0.00       2         monte_carlo_mandelbrot [1]
+                                                 <spontaneous>
+[1]     86.6    5.43    0.00                 frame_dummy [1]
+-----------------------------------------------
+                                                 <spontaneous>
+[2]     13.4    0.84    0.00                 _init [2]
+-----------------------------------------------
+                0.00    0.00       2/2           main [9]
+[3]      0.0    0.00    0.00       2         monte_carlo_mandelbrot [3]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -132,7 +138,7 @@ index % time    self  children    called     name
  for that member, how many times it was called from other members of
  the cycle.
 
-Copyright (C) 2012-2022 Free Software Foundation, Inc.
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright
@@ -140,4 +146,4 @@ notice and this notice are preserved.
 
 Index by function name
 
-   [1] monte_carlo_mandelbrot
+   [2] _init                   [1] frame_dummy             [3] monte_carlo_mandelbrot
